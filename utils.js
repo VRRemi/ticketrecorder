@@ -7,3 +7,4 @@ function RandomString(length) {
     }
     return b.join("");
 }
+
