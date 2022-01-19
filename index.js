@@ -8,4 +8,5 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.limits = new Map();
 client.config = config;
+command.run(client);
 client.login(config.token)
