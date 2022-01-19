@@ -5,5 +5,6 @@ module.exports = async (client) => {
     require("../dashboard/index")(client);
     await mongoose.connect(client.config.mongodb. {
         useNewUrlParser: true,
+        useUnifiedTopology: true,
     })
 }
