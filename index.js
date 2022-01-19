@@ -9,4 +9,5 @@ client.aliases = new Collection();
 client.limits = new Map();
 client.config = config;
 command.run(client);
+events.run(client)
 client.login(config.token)
