@@ -7,4 +7,5 @@ const command = require("./structures/slash");
 client.commands = new Collection();
 client.aliases = new Collection();
 client.limits = new Map();
+client.config = config;
 client.login(config.token)
