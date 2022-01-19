@@ -13,6 +13,6 @@ module.exports = async (client) => {
 
     console.log(`${client.user.username} bot is connected...`);
     client.guilds.cache.map(guild => {
-        
+        commands = guild ? guild.commands : client.application?.commands
     })
 }
