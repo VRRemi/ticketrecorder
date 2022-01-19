@@ -11,5 +11,5 @@ module.exports = async (client) => {
         console.log(`${client.user.username} database is connected...`)
     });
 
-    
+    console.log(`${client.user.username} bot is connected...`);
 }
