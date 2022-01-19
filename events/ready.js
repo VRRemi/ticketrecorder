@@ -7,6 +7,6 @@ module.exports = async (client) => {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }, (err) => {
-        
+        if (err) return console.error(err);
     })
 }
