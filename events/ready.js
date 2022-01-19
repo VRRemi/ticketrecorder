@@ -8,5 +8,6 @@ module.exports = async (client) => {
         useUnifiedTopology: true,
     }, (err) => {
         if (err) return console.error(err);
+        console.log(`${client.user.username} database is connected...`)
     })
 }
