@@ -4,3 +4,4 @@ const client = new Client({disableMentions: "everyone", disabledEvents: ["TYPING
 const events = require("./structures/event");
 const command = require("./structures/slash");
 
+client.login(config.token)
