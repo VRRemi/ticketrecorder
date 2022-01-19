@@ -56,6 +56,6 @@ const markdown = (text) => {
             text = text?.replace(md.mark + str + md.mark, `<${md.tag} class="${md.style}">${str}</${md.tag}>`)
         })
     })
-    
+
     return text;
 }
