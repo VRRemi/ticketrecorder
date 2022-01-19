@@ -5,4 +5,5 @@ const events = require("./structures/event");
 const command = require("./structures/slash");
 
 client.commands = new Collection();
+client.aliases = new Collection();
 client.login(config.token)
