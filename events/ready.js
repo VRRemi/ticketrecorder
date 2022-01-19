@@ -6,5 +6,6 @@ module.exports = async (client) => {
     await mongoose.connect(client.config.mongodb. {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        
     })
 }
