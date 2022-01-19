@@ -9,5 +9,5 @@ module.exports = async (client) => {
     }, (err) => {
         if (err) return console.error(err);
         console.log(`${client.user.username} database is connected...`)
-    })
+    });
 }
