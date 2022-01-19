@@ -60,3 +60,6 @@ const markdown = (text) => {
     return text;
 }
 
+module.exports = {
+    RandomString, markdown
+}
