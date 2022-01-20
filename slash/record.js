@@ -67,6 +67,7 @@ module.exports.run = async (client, interaction, options) => {
                                         ids.push(`${id}-accepted`);
                                     } else {
                                         ids.push(`${id}-declined`);
+                                        replyEmbed(`**\`${user.user.username}\` has been excluded, they declined**`, channel)
                         };
                     }
                 });
