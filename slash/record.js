@@ -92,3 +92,4 @@ module.exports.run = async (client, interaction, options) => {
                     id: interaction.guildId,
                     channel: interaction.channelId,
                     author: interaction.member.id,
+                    records: confirmed
