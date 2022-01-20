@@ -58,6 +58,7 @@ module.exports.run = async (client, interaction, options) => {
                                     max: 1
                                 }).then(async messages => {
                                     if (!messages.first()) {
+                                        user.send("**Timeout, you've been excluded**")
                         };
                     }
                 });
