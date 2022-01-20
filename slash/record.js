@@ -93,3 +93,4 @@ module.exports.run = async (client, interaction, options) => {
                     channel: interaction.channelId,
                     author: interaction.member.id,
                     records: confirmed
+                }).save();
