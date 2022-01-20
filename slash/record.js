@@ -43,6 +43,9 @@ module.exports.run = async (client, interaction, options) => {
                         replyEmbed(`**You can't include yourself**`, channel)
                         ids.push(`${id}-declined`);
                         await submit(ids, length);
+                    } else {
+                        let user = await interaction.member.guild.members.cache.get(id);
+                        if (!user) {
                         };
                     }
                 });
