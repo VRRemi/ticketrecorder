@@ -48,6 +48,7 @@ module.exports.run = async (client, interaction, options) => {
                         if (!user) {
                             replyEmbed(`**\`${id}\` has been excluded, couldn't find them in the server**`, channel)
                             ids.push(`${id}-declined`);
+                            await submit(ids, length);
                         };
                     }
                 });
