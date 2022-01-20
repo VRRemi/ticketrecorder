@@ -6,6 +6,14 @@ module.exports = async(client, interaction) => {
     let cmd = await client.commands.get(interaction.commandName);
     if (!cmd) interaction.reply({ content: "Unknown command", ephemeral: true })
     else if (cmd.requirements.userPerms && !interaction.member.permissions.has(cmd.requirements.userPerms)) {
+        interaction.reply({
+            embeds: [new MessageEmbed()
+                .setAuthor({ name: "Your Missing Permissions", iconURL: interaction.member.displayAvatarURL() })
+                .addField(`**You are missing the following permissions**`, missingPerms(interaction.member, cmd.requirements.userPerms))
+                .setColor("RED")
+            ],
+            ephemeral: true
+        })
         
     }
 }
