@@ -89,3 +89,4 @@ module.exports.run = async (client, interaction, options) => {
             ids.filter(id => id.split("-")[1] == "accepted" ? confirmed.push(id.split("-")[0]) : false);
             if (confirmed.length > 1) {
                 await new RECORDS({
+                    id: interaction.guildId,
