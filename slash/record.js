@@ -3,4 +3,5 @@ let RECORDS = require("../models/records");
 let limits = new Map();
 
 module.exports.run = async (client, interaction, options) => {
+    let check = await RECORDS.findOne({ id: interaction.guildId, channel: interaction.channelId, author: interaction.member.id });
     }
