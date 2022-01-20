@@ -68,6 +68,7 @@ module.exports.run = async (client, interaction, options) => {
                                     } else {
                                         ids.push(`${id}-declined`);
                                         replyEmbed(`**\`${user.user.username}\` has been excluded, they declined**`, channel)
+                                        user.send(`**Confirmed, You are not going to participate in the chat record at ${channel} channel**`);
                         };
                     }
                 });
