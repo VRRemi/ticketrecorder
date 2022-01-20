@@ -94,3 +94,4 @@ module.exports.run = async (client, interaction, options) => {
                     author: interaction.member.id,
                     records: confirmed
                 }).save();
+                limits.delete(interaction.channelId+interaction.member.id);
