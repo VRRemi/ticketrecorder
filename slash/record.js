@@ -32,6 +32,7 @@ module.exports.run = async (client, interaction, options) => {
             }
             if (messages.first().content.toLowerCase() == "cancel") {
                 limits.delete(interaction.channelId+interaction.member.id);
+                return replyEmbed("**Recording request has been aborted**", channel);
                         };
                     }
                 });
