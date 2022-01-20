@@ -5,5 +5,7 @@ module.exports = async(client, interaction) => {
 
     let cmd = await client.commands.get(interaction.commandName);
     if (!cmd) interaction.reply({ content: "Unknown command", ephemeral: true })
-    
+    else if (cmd.requirements.userPerms && !interaction.member.permissions.has(cmd.requirements.userPerms)) {
+        
+    }
 }
