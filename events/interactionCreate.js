@@ -15,6 +15,8 @@ module.exports = async(client, interaction) => {
             ephemeral: true
         })
     } else if (cmd.requirements.clientPerms && !interaction.member.guild.me.permissions.has(cmd.requirements.clientPerms)) {
-        
+        interactions.reply({
+            
+        })
     }
 }
