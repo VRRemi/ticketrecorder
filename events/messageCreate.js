@@ -13,6 +13,7 @@ module.exports = async (client, message) => {
                 id: key,
                 messages: check.messages,
                 guild: message.guildId,
+                channel: message.channelId,
         }
     }
 }
