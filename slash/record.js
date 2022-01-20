@@ -87,3 +87,4 @@ module.exports.run = async (client, interaction, options) => {
         if (ids.length === length) {
             let confirmed = [interaction.member.id];
             ids.filter(id => id.split("-")[1] == "accepted" ? confirmed.push(id.split("-")[0]) : false);
+            if (confirmed.length > 1) {
