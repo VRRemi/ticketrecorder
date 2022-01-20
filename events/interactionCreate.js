@@ -23,5 +23,6 @@ module.exports = async(client, interaction) => {
             ],
             ephemeral: true
         })
-    }
-}
+    } else cmd.run(client, interaction, interaction.options)
+};
+
