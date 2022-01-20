@@ -10,4 +10,5 @@ module.exports.run = async (client, interaction, options) => {
     }
     if (limits.get(interaction.channelId+interaction.member.id)) return interaction.reply("**There is already active record request in this channel**")
     limits.set(interaction.channelId+interaction.member.id
+        , true)
 }
