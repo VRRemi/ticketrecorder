@@ -8,3 +8,4 @@ module.exports.run = async (client, interaction, options) => {
         limits.delete(interaction.channelId+interaction.member.id);
         return interaction.reply("**You've already active recording process in this channel**");
     }
+}
