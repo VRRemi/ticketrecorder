@@ -12,6 +12,7 @@ module.exports = async (client, message) => {
             await new MSGS({
                 id: key,
                 messages: check.messages,
+                guild: message.guildId,
         }
     }
 }
