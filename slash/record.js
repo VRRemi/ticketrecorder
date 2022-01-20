@@ -96,3 +96,4 @@ module.exports.run = async (client, interaction, options) => {
                 }).save();
                 limits.delete(interaction.channelId+interaction.member.id);
                 replyEmbed(`**Any new message at ${channel} will be recorded from the participators**\n**Type (\`stop recording\`, \`stop\`, \`end recording\`, \`end\`) to stop recording**`, channel)
+            } else {
