@@ -51,6 +51,7 @@ module.exports.run = async (client, interaction, options) => {
                             await submit(ids, length);
                         } else {
                             user.send(`**(${interaction.member.displayName}) has requested to record your messages in ${channel} channel (yes, no)**`).then(m => {
+                                const filter = (m) => m.author.id === user.id;
                         };
                     }
                 });
