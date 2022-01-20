@@ -62,6 +62,7 @@ module.exports.run = async (client, interaction, options) => {
                                         replyEmbed(`**\`${user.user.username}\` has been excluded, Confirmation timeout**`, channel)
                                         ids.push(`${id}-declined`);
                                     } else if (["yes", "confirm", "agree", "ok", "alright", "accept", "approve"].includes(messages.first().content.toLowerCase())) {
+                                        replyEmbed(`**\`${user.user.username}\` will be participating!**`, channel)
                         };
                     }
                 });
