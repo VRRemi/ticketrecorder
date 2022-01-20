@@ -37,6 +37,8 @@ module.exports.run = async (client, interaction, options) => {
                 replyEmbed("**Waiting for participator's confirmation!**", channel)
                 let length = 0
                 let ids = [];
+                messages.first().content.split(", ").filter(e => e).map(async id => {
+                    length++
                         };
                     }
                 });
