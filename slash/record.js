@@ -117,4 +117,5 @@ module.exports.run = async (client, interaction, options) => {
 module.exports.help = {
     name: "record",
     description: "Record messages between you and some certain people",
+    options: []
 }
