@@ -106,3 +106,6 @@ module.exports.run = async (client, interaction, options) => {
         return channel.send({
             embeds: [
                 new MessageEmbed()
+                    .setDescription(message)
+                    .setColor("GREEN")
+                    .setFooter({ text: `${interaction.member.displayName} recording request process`})
