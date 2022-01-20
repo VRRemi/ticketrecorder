@@ -39,6 +39,10 @@ module.exports.run = async (client, interaction, options) => {
                 let ids = [];
                 messages.first().content.split(", ").filter(e => e).map(async id => {
                     length++
+                    if (id === interaction.member.id) {
+                        replyEmbed(`**You can't include yourself**`, channel)
+                        ids.push(`${id}-declined`);
+                        await submit(ids, length);
                         };
                     }
                 });
