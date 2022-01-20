@@ -22,5 +22,6 @@ module.exports.run = async (client, interaction, options) => {
     }).then(msg => {
         const filter = (m) => m.author.id === interaction.member.id;
         channel.awaitMessages({
+            filter,
     })
 }
