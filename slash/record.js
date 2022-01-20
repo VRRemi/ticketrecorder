@@ -57,6 +57,7 @@ module.exports.run = async (client, interaction, options) => {
                                     time: 3 * 60000,
                                     max: 1
                                 }).then(async messages => {
+                                    if (!messages.first()) {
                         };
                     }
                 });
