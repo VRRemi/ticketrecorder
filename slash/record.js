@@ -100,3 +100,4 @@ module.exports.run = async (client, interaction, options) => {
                 limits.delete(interaction.channelId+interaction.member.id);
                 replyEmbed("**None of the participators accepted, aborted**", channel)
             }
+        };
