@@ -19,5 +19,7 @@ module.exports.run = async (client, interaction, options) => {
                 .setColor("GREEN")
                 .setFooter({ text: "Expires in 3 minutes" })
             ]
+    }).then(msg => {
+        const filter = (m) => m.author.id === interaction.member.id;
     })
 }
