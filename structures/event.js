@@ -6,4 +6,5 @@ module.exports.run = (client) => {
     const eventFiles = readdirSync(filePath);
     for (const eventFile of eventFiles) {
         const event = require(`${filePath}/${eventFile}`);
+        const eventName = eventFile.split(".").shift();
     }
