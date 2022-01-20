@@ -12,4 +12,5 @@ module.exports.run = async (client, interaction, options) => {
     limits.set(interaction.channelId+interaction.member.id
         , true)
     let channel = interaction.member.guild.channels.cache.get(interaction.channelId);
+    interaction.reply({
 }
