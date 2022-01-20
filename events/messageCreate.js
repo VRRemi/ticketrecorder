@@ -8,6 +8,7 @@ module.exports = async (client, message) => {
     if (["stop recording", "stop", "end recording", "end"].includes(message.content.toLowerCase())) {
         let check = await RECORDS.findOne({ id: message.guildId, channel: message.channelId, author: message.author.id })
         let (check) {
+            let key = RandomString(46)
             
         }
     }
