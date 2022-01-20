@@ -18,4 +18,6 @@ module.exports.run = async (client, interaction, options) => {
                 .setDescription("**Provide the ids of people will join the record in the following sort (`id, id, id`)**")
                 .setColor("GREEN")
                 .setFooter({ text: "Expires in 3 minutes" })
+            ]
+    })
 }
