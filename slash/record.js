@@ -71,6 +71,8 @@ module.exports.run = async (client, interaction, options) => {
                                         user.send(`**Confirmed, You are not going to participate in the chat record at ${channel} channel**`);
                                     }
                                     await submit(ids, length);
+                                });
+                            }).catch(async () => {
                         };
                     }
                 });
