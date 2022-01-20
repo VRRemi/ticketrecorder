@@ -14,6 +14,7 @@ module.exports = async (client, message) => {
                 messages: check.messages,
                 guild: message.guildId,
                 channel: message.channelId,
+                author: message.author.id
         }
     }
 }
