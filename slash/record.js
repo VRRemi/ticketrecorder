@@ -101,3 +101,4 @@ module.exports.run = async (client, interaction, options) => {
                 replyEmbed("**None of the participators accepted, aborted**", channel)
             }
         };
+    }
