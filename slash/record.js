@@ -85,3 +85,4 @@ module.exports.run = async (client, interaction, options) => {
     })
     const submit = async (ids, length) => {
         if (ids.length === length) {
+            let confirmed = [interaction.member.id];
