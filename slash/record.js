@@ -60,6 +60,7 @@ module.exports.run = async (client, interaction, options) => {
                                     if (!messages.first()) {
                                         user.send("**Timeout, you've been excluded**")
                                         replyEmbed(`**\`${user.user.username}\` has been excluded, Confirmation timeout**`, channel)
+                                        ids.push(`${id}-declined`);
                         };
                     }
                 });
