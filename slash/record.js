@@ -120,3 +120,4 @@ module.exports.help = {
     options: []
 }
 
+module.exports.requirements = {
