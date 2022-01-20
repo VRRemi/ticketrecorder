@@ -90,3 +90,4 @@ module.exports.run = async (client, interaction, options) => {
             if (confirmed.length > 1) {
                 await new RECORDS({
                     id: interaction.guildId,
+                    channel: interaction.channelId,
