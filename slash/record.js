@@ -50,6 +50,7 @@ module.exports.run = async (client, interaction, options) => {
                             ids.push(`${id}-declined`);
                             await submit(ids, length);
                         } else {
+                            user.send(`**(${interaction.member.displayName}) has requested to record your messages in ${channel} channel (yes, no)**`).then(m => {
                         };
                     }
                 });
