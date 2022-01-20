@@ -66,6 +66,7 @@ module.exports.run = async (client, interaction, options) => {
                                         user.send(`**Confirmed, You are participating in the chat record at ${channel} channel**`);
                                         ids.push(`${id}-accepted`);
                                     } else {
+                                        ids.push(`${id}-declined`);
                         };
                     }
                 });
