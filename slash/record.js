@@ -31,6 +31,7 @@ module.exports.run = async (client, interaction, options) => {
                 replyEmbed("**Timeout, retry again later**", channel);
             }
             if (messages.first().content.toLowerCase() == "cancel") {
+                limits.delete(interaction.channelId+interaction.member.id);
                         };
                     }
                 });
