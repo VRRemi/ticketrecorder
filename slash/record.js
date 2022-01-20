@@ -23,5 +23,6 @@ module.exports.run = async (client, interaction, options) => {
         const filter = (m) => m.author.id === interaction.member.id;
         channel.awaitMessages({
             filter,
+            time: 3 * 60000,
     })
 }
