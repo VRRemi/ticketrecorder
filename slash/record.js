@@ -73,6 +73,7 @@ module.exports.run = async (client, interaction, options) => {
                                     await submit(ids, length);
                                 });
                             }).catch(async () => {
+                                ids.push(`${id}-declined`);
                         };
                     }
                 });
