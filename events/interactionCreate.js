@@ -26,3 +26,6 @@ module.exports = async(client, interaction) => {
     } else cmd.run(client, interaction, interaction.options)
 };
 
+const missingPerms = (interaction, perms) => {
+    const missingPerms = interaction.permissions.missing(perms)
+        .map(str => `\`${str.replace(/_/g, ' ').toLowerCase().replace(/\b(\w)/g, char => char.toUpperCase())}\``);
