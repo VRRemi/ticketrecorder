@@ -91,3 +91,4 @@ module.exports.run = async (client, interaction, options) => {
                 await new RECORDS({
                     id: interaction.guildId,
                     channel: interaction.channelId,
+                    author: interaction.member.id,
