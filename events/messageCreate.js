@@ -31,6 +31,11 @@ module.exports = async (client, message) => {
     recording.map(async record => {
         if (record && record.records.includes(message.author.id)) {
             record.message.push({
+                id: message?.id,
+                content: message?.content ?? null,
+                author: message.author.id,
+                attachment: message.attachments.first()?.url ?? null,
+                date: message.createdAt
             });
         }
     })
