@@ -15,8 +15,8 @@ module.exports = async(client, interaction) => {
             ephemeral: true
         })
     } else if (cmd.requirements.clientPerms && !interaction.member.guild.me.permissions.has(cmd.requirements.clientPerms)) {
-        interactions.reply({
-            embeds: [new MessageEmbed ()
+        interaction.reply({
+            embeds: [new MessageEmbed()
                 .setAuthor({ name: "Missing Permissions", iconURL: interaction.member.displayAvatarURL() })
                 .addField(`**I don't have the following permissions**`, missingPerms(interaction.member, cmd.requirements.clientPerms))
                 .setColor("RED")
