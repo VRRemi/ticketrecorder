@@ -56,6 +56,7 @@ module.exports.run = async (client, interaction, options) => {
                                     filter,
                                     time: 3 * 60000,
                                     max: 1
+                                }).then(async messages => {
                         };
                     }
                 });
