@@ -63,6 +63,7 @@ module.exports.run = async (client, interaction, options) => {
                                         ids.push(`${id}-declined`);
                                     } else if (["yes", "confirm", "agree", "ok", "alright", "accept", "approve"].includes(messages.first().content.toLowerCase())) {
                                         replyEmbed(`**\`${user.user.username}\` will be participating!**`, channel)
+                                        user.send(`**Confirmed, You are participating in the chat record at ${channel} channel**`);
                         };
                     }
                 });
