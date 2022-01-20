@@ -104,3 +104,5 @@ module.exports.run = async (client, interaction, options) => {
     }
     const replyEmbed = (message, channel) => {
         return channel.send({
+            embeds: [
+                new MessageEmbed()
