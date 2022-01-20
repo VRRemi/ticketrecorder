@@ -30,7 +30,7 @@ const missingPerms = (interaction, perms) => {
     const missingPerms = interaction.permissions.missing(perms)
         .map(str => `\`${str.replace(/_/g, ' ').toLowerCase().replace(/\b(\w)/g, char => char.toUpperCase())}\``);
 
-        return missingPerms.length > 1 ?
+    return missingPerms.length > 1 ?
         `**${missingPerms.slice(0, -1).join(", ")}, ${missingPerms.slice(-1)[0]}**` :
         missingPerms[0];
 }
