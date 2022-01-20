@@ -8,4 +8,7 @@ module.exports = async(client, guild) => {
                 embeds: [
                     new MessageEmbed().setDescription(`**Couldn't set \`slash commands\` on your server \`${guild.name}\`\nUse this: [\`Click me\`](https://discord.com/oauth2/authorize?client_id=927231576427880538&permissions=8&scope=bot%20applications.commands)**`).setColor("RED").setTimestamp()
                 ]
+            }).catch(() => {});
+        });
+    });
 }
