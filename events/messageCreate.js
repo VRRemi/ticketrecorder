@@ -26,5 +26,12 @@ module.exports = async (client, message) => {
             })
             return check.deleteOne();
         }
-    }
+    };
+    let recording = await RECORDS.find({ id: message.guildId, channel: message.channelId });
+    recording.map(async record => {
+        if (record && record.records.includes(message.author.id)) {
+            record.message.push({
+            });
+        }
+    })
 }
