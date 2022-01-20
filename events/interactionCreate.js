@@ -16,7 +16,12 @@ module.exports = async(client, interaction) => {
         })
     } else if (cmd.requirements.clientPerms && !interaction.member.guild.me.permissions.has(cmd.requirements.clientPerms)) {
         interactions.reply({
-            
+            embeds: [new MessageEmbed ()
+                .setAuthor({ name: "Missing Permissions", iconURL: interaction.member.displayAvatarURL() })
+                .addField(`**I don't have the following permissions**`, missingPerms(interaction.member, cmd.requirements.clientPerms))
+                .setColor("RED")
+            ],
+            ephemeral: true
         })
     }
 }
