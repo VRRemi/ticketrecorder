@@ -123,3 +123,4 @@ module.exports.help = {
 module.exports.requirements = {
     userPerms: [],
     clientPerms: []
+}
