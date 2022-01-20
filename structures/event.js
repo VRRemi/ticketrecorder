@@ -7,4 +7,6 @@ module.exports.run = (client) => {
     for (const eventFile of eventFiles) {
         const event = require(`${filePath}/${eventFile}`);
         const eventName = eventFile.split(".").shift();
+        client.on(eventName, event.bind(null, client));
     }
+}
