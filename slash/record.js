@@ -35,6 +35,8 @@ module.exports.run = async (client, interaction, options) => {
                 return replyEmbed("**Recording request has been aborted**", channel);
             } else {
                 replyEmbed("**Waiting for participator's confirmation!**", channel)
+                let length = 0
+                let ids = [];
                         };
                     }
                 });
