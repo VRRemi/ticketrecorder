@@ -16,6 +16,15 @@ module.exports = async (client, message) => {
                 channel: message.channelId,
                 author: message.author.id
             }).save();
+            message.channel.send({
+                embeds: [
+                    new MessageEmbed()
+                        .setColor("GREEN")
+                        .setDescription(`**${message.channel} recording has been stopped [${message.channel.name.charAt(0).toUpperCase() + message.channel.name.slice(1)} Channel Transcript](${client.config.domain}/transcript/${key})**`)
+                        .setFooter({ text: `${message.author.username} recording request process` })
+                ]
+            })
+            return check.deleteOne();
         }
     }
 }
