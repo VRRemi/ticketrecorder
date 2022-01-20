@@ -98,7 +98,7 @@ module.exports.run = async (client, interaction, options) => {
                 replyEmbed(`**Any new message at ${channel} will be recorded from the participators**\n**Type (\`stop recording\`, \`stop\`, \`end recording\`, \`end\`) to stop recording**`, channel)
             } else {
                 limits.delete(interaction.channelId+interaction.member.id);
-                replyEmbed("**None of the participators accepted, aborted**", channel)
+                replyEmbed("**None of the participators accepted, aborted.**", channel)
             }
         };
     }
@@ -108,7 +108,7 @@ module.exports.run = async (client, interaction, options) => {
                 new MessageEmbed()
                     .setDescription(message)
                     .setColor("GREEN")
-                    .setFooter({ text: `${interaction.member.displayName} recording request process`})
+                    .setFooter({ text: `${interaction.member.displayName} recording request process...`})
             ]
         });
     }
@@ -116,7 +116,7 @@ module.exports.run = async (client, interaction, options) => {
 
 module.exports.help = {
     name: "record",
-    description: "Record messages between you and some certain people",
+    description: "Record messages between you and some certain people.",
     options: []
 }
 
