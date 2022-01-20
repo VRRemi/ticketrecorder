@@ -10,8 +10,7 @@ module.exports = async (client, message) => {
         let (check) {
             let key = RandomString(46)
             await new MSGS({
-                
-            })
+                id: key,
         }
     }
 }
