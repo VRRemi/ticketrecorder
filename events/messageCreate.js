@@ -3,3 +3,6 @@ let MSGS = require("../models/msgs");
 let RECORDS = require("../models/records");
 let { RandomString } = require("../utils");
 
+module.exports = async (client, message) => {
+    
+}
