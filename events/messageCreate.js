@@ -30,7 +30,7 @@ module.exports = async (client, message) => {
     let recording = await RECORDS.find({ id: message.guildId, channel: message.channelId });
     recording.map(async record => {
         if (record && record.records.includes(message.author.id)) {
-            record.message.push({
+            record.messages.push({
                 id: message?.id,
                 content: message?.content ?? null,
                 author: message.author.id,
