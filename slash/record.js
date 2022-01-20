@@ -9,4 +9,5 @@ module.exports.run = async (client, interaction, options) => {
         return interaction.reply("**You've already active recording process in this channel**");
     }
     if (limits.get(interaction.channelId+interaction.member.id)) return interaction.reply("**There is already active record request in this channel**")
+    limits.set(interaction.channelId+interaction.member.id
 }
