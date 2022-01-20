@@ -34,6 +34,7 @@ module.exports.run = async (client, interaction, options) => {
                 limits.delete(interaction.channelId+interaction.member.id);
                 return replyEmbed("**Recording request has been aborted**", channel);
             } else {
+                replyEmbed("**Waiting for participator's confirmation!**", channel)
                         };
                     }
                 });
