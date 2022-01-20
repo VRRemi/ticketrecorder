@@ -29,6 +29,7 @@ module.exports.run = async (client, interaction, options) => {
             if (!messages.first()) {
                 limits.delete(interaction.channelId+interaction.member.id);
                 replyEmbed("**Timeout, retry again later**", channel);
+            }
                         };
                     }
                 });
