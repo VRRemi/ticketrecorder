@@ -24,5 +24,6 @@ module.exports.run = async (client, interaction, options) => {
         channel.awaitMessages({
             filter,
             time: 3 * 60000,
+            max: 1
     })
 }
