@@ -2,4 +2,6 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = async(client, interaction) => {
     if(!interaction.isCommand()) return;
+
+    let cmd = await client.commands.get(interaction.commandName);
 }
