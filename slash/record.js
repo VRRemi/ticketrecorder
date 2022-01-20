@@ -109,3 +109,7 @@ module.exports.run = async (client, interaction, options) => {
                     .setDescription(message)
                     .setColor("GREEN")
                     .setFooter({ text: `${interaction.member.displayName} recording request process`})
+            ]
+        });
+    }
+}
