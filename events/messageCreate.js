@@ -37,6 +37,7 @@ module.exports = async (client, message) => {
                 attachment: message.attachments.first()?.url ?? null,
                 date: message.createdAt
             });
+            await record.save();
         }
     })
 }
