@@ -13,4 +13,5 @@ module.exports.run = async (client, interaction, options) => {
         , true)
     let channel = interaction.member.guild.channels.cache.get(interaction.channelId);
     interaction.reply({
+        embeds: [
 }
