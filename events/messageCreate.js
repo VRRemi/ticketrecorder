@@ -9,7 +9,9 @@ module.exports = async (client, message) => {
         let check = await RECORDS.findOne({ id: message.guildId, channel: message.channelId, author: message.author.id })
         let (check) {
             let key = RandomString(46)
-            
+            await new MSGS({
+                
+            })
         }
     }
 }
