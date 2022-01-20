@@ -75,6 +75,8 @@ module.exports.run = async (client, interaction, options) => {
                             }).catch(async () => {
                                 ids.push(`${id}-declined`);
                                 replyEmbed(`**\`${user.user.username}\` has been excluded, DMs are closed**`, channel)
+                                await submit(ids, length);
+                            });
                         };
                     }
                 });
