@@ -10,3 +10,9 @@ module.exports = (client) => {
         root: path.join(__dirname, "components"),
         extname: ".liquid",
     });
+
+    fastify.register(require('fastify-formbody'))
+    
+    require("./routes.json").map(route => {
+        fastify.register(require(route));
+    })
