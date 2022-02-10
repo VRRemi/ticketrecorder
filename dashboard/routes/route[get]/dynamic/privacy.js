@@ -4,3 +4,5 @@ const index = async(fastify, options, done) => {
     });
     done();
 };
+
+module.exports = index;
