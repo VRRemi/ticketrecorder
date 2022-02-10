@@ -5,3 +5,8 @@ module.exports = (client) => {
     const fastify = require('fastify')({ logger: false });
     const { Liquid } = require("liquidjs");
     const path = require("path");
+
+    const engine = new Liquid({
+        root: path.join(__dirname, "components"),
+        extname: ".liquid",
+    });
