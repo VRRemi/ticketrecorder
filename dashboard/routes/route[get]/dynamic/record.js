@@ -39,3 +39,8 @@ const index = async (fastify, options, done) => {
                         guild: req.client.guilds.cache?.get(await record.guild)?.name ?? "Unknown",
                         channel: req.client.channels.cache?.get(await record.channel)?.name ?? "Unknown",
                         author: (await req.client.users.fetch(await record.author).catch(() => { }))?.username ?? "Unknown"
+                    });
+                };
+            };
+        };
+    });
