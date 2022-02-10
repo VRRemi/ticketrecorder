@@ -30,3 +30,8 @@ const discordoauth2 = (fastify, options, done) => {
         } else reply.redirect("/");
     });
 
+    fastify.get("/logout", async function(request, reply) {
+        await request.session.delete();
+        reply.redirect("/");
+    })
+    done();
