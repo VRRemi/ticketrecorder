@@ -14,3 +14,4 @@ const index = async (fastify, options, done) => {
                     record.deleteOne();
                     fastify.notFound(req, res);
                 } else {
+                    let time_zone = await (await iplocate(req.headers['x-forwarded-for'] || req.connection.remoteAddress)).time_zone
