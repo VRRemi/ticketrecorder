@@ -17,3 +17,6 @@ const discordoauth2 = (fastify, options, done) => {
         callbackUri: `${config.domain}/callback`
     })
 
+    fastify.get('/callback', async function(request, reply) {
+        const token = await this.discordOAuth2.getAccessTokenFromAuthorizationCodeFlow(request);
+
