@@ -12,4 +12,6 @@ const index = async(fastify, options, done) => {
             });
             req.render("/dynamic/profile.liquid", { ids, avatar: (await req.client.users.fetch((await req.user).id).catch(() => {})).displayAvatarURL() })
         }
+    });
+    done();
 };
