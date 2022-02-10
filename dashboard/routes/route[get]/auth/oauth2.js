@@ -23,3 +23,9 @@ const discordoauth2 = (fastify, options, done) => {
         request.session.set('access_token', token.access_token)
         request.session.set('token_type', token.token_type)
 
+        let url = request.session.get("callback");
+        if (url && !url.includes("/auth")) {
+            request.session.set("callback", null)
+            reply.redirect(url);
+        } else reply.redirect("/");
+    });
