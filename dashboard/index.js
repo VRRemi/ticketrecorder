@@ -82,3 +82,15 @@ module.exports = (client) => {
     start();
 };
 
+const getUser = async(type, access) => {
+    if (type && access) {
+        const userData = require("axios").get('https://discord.com/api/users/@me', {
+            responseType: 'json',
+            headers: {
+                authorization: `${type} ${access}`
+            }
+        }).catch(() => {});
+
+        return (await userData)?.data ?? null;
+    }
+}
