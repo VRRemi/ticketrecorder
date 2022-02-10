@@ -35,3 +35,5 @@ const discordoauth2 = (fastify, options, done) => {
         reply.redirect("/");
     })
     done();
+}
+module.exports = discordoauth2;
