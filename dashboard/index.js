@@ -16,3 +16,8 @@ module.exports = (client) => {
     require("./routes.json").map(route => {
         fastify.register(require(route));
     })
+
+    fastify.register(require('fastify-static'), {
+        root: path.join(__dirname, 'public'),
+        prefix: '/public/'
+    });
