@@ -26,3 +26,11 @@ const index = async (fastify, options, done) => {
                             let emoji = m?.split(">")[0]?.split(":");
                             if (emoji[2]) msg.content = msg.content?.replace(`<${m?.split(">")[0]}>`, `<img src="https://cdn.discordapp.com/emojis/${emoji[2]}.webp?size=44&quality=lossless" class="inline-block w-7 h-7" alt="emoji">`)
                         })
+                        msg?.content?.split("<@")?.map(async m => {
+                            let mention = m?.split(">")[0];
+                            if (mention) {
+                                let user = (await req.client.users.fetch(mention?.split("!")?.join("")).catch(() => { }))?.username ?? mention;
+                                msg.content = msg.content?.replace(`<@${mention}>`, `<a target="_blank" href="https://discord.com/users/${mention?.split("!")?.join("")}" class="bg-blurple-200 text-blurple-300 rounded px-1 hover:underline">@${user}</a>`)
+                            }
+                        })
+                    })
