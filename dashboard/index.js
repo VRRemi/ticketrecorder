@@ -47,3 +47,7 @@ module.exports = (client) => {
                 client,
                 user: await req.user ? await client.users.fetch((await req.user).id).catch(() => {}) : null,
             };
+            res.view(`/dashboard/components/${file}`, Object.assign(baseData, data)).code(status || 200)
+        }
+        done()
+    });
