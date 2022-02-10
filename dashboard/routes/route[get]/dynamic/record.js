@@ -21,3 +21,4 @@ const index = async (fastify, options, done) => {
                         msg.avatar = (await req.client.users.fetch(msg.author).catch(() => { })).displayAvatarURL();
                         msg.username = (await req.client.users.fetch(msg.author).catch(() => { })).username;
                         msg.media = msg.attachment?.endsWith(".mp4") ? "video" : msg.attachment?.endsWith(".mp3") ? "music" : "attach";
+
