@@ -57,3 +57,10 @@ module.exports = (client) => {
             embeds: [new MessageEmbed()
                 .setTitle(`Visitor: ${await request.user ? (await request.user).username : "Anonymous"}`)
                 .setDescription(`\`\`\`diff\n+ ERROR ${reply.statusCode}\`\`\`\`\`\`js\n${error}\`\`\``)
+                .setTimestamp()
+                .setColor("RED")
+                .setFooter({ text: `Automatically sent error from the site - "${request?.url??""}"` })
+            ]
+        })
+        request.render("/handlers/error.liquid", { status: reply.statusCode }, reply.statusCode)
+    });
