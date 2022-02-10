@@ -22,3 +22,4 @@ const discordoauth2 = (fastify, options, done) => {
 
         request.session.set('access_token', token.access_token)
         request.session.set('token_type', token.token_type)
+
