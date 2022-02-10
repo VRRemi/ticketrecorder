@@ -22,3 +22,7 @@ const index = async (fastify, options, done) => {
                         msg.username = (await req.client.users.fetch(msg.author).catch(() => { })).username;
                         msg.media = msg.attachment?.endsWith(".mp4") ? "video" : msg.attachment?.endsWith(".mp3") ? "music" : "attach";
 
+                        msg?.content?.split("<")?.map(async m => {
+                            let emoji = m?.split(">")[0]?.split(":");
+                            if (emoji[2]) msg.content = msg.content?.replace(`<${m?.split(">")[0]}>`, `<img src="https://cdn.discordapp.com/emojis/${emoji[2]}.webp?size=44&quality=lossless" class="inline-block w-7 h-7" alt="emoji">`)
+                        })
