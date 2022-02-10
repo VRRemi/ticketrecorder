@@ -3,3 +3,4 @@ let moment = require ("moment-timezone");
 let { markdown } = ("../../../../utils");
 const iplocate = require("node-iplocate");
 
+const index = async (fastify, options, done) => {
