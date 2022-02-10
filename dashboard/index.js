@@ -64,3 +64,7 @@ module.exports = (client) => {
         })
         request.render("/handlers/error.liquid", { status: reply.statusCode }, reply.statusCode)
     });
+
+    fastify.decorate('notFound', (request, reply) => {
+       request.render("./handlers/error.liquid", { status: 404 }, 404);
+    });
