@@ -27,3 +27,13 @@ module.exports = (client) => {
             liquid: engine,
         },
     });
+
+    fastify.register(require('fastify-secure-session'), {
+        cookieName: 'connect.sid',
+        secret: "#@%#&^$^$%@$^$&%#$%@#$%$^%&$%^#$%@#$%#E%#%@$FEErfgr3g#%GT%536c53cc6%5%tv%4y4hrgrggrgrgf4n",
+        cookie: {
+            path: '/',
+            maxAge: 86400000000
+        },
+        saveUninitialized: false
+    });
