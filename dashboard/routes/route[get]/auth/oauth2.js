@@ -20,3 +20,5 @@ const discordoauth2 = (fastify, options, done) => {
     fastify.get('/callback', async function(request, reply) {
         const token = await this.discordOAuth2.getAccessTokenFromAuthorizationCodeFlow(request);
 
+        request.session.set('access_token', token.access_token)
+        request.session.set('token_type', token.token_type)
