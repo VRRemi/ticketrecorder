@@ -21,3 +21,9 @@ module.exports = (client) => {
         root: path.join(__dirname, 'public'),
         prefix: '/public/'
     });
+
+    fastify.register(require("point-of-view"), {
+        engine: {
+            liquid: engine,
+        },
+    });
