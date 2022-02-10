@@ -70,3 +70,14 @@ module.exports = (client) => {
     });
     fastify.setNotFoundHandler(fastify.notFound);
 
+    const start = async() => {
+        try {
+            await fastify.listen(port, '0.0.0.0');
+            console.log(`${client.user.username} website is connected...`);
+        } catch (error) {
+            fastify.log.error(error);
+            process.exit(1);
+        }
+    }
+    start();
+};
