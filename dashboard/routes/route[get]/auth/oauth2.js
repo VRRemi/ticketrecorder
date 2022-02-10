@@ -29,3 +29,4 @@ const discordoauth2 = (fastify, options, done) => {
             reply.redirect(url);
         } else reply.redirect("/");
     });
+
