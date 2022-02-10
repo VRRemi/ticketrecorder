@@ -51,3 +51,9 @@ module.exports = (client) => {
         }
         done()
     });
+
+    fastify.setErrorHandler(async(error, request, reply) => {
+        client.channels.cache.get(client.config.logs).send({
+            embeds: [new MessageEmbed()
+                .setTitle(`Visitor: ${await request.user ? (await request.user).username : "Anonymous"}`)
+                .setDescription(`\`\`\`diff\n+ ERROR ${reply.statusCode}\`\`\`\`\`\`js\n${error}\`\`\``)
