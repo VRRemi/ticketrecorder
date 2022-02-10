@@ -16,3 +16,4 @@ const discordoauth2 = (fastify, options, done) => {
         startRedirectPath: '/auth',
         callbackUri: `${config.domain}/callback`
     })
+
