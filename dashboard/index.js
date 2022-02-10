@@ -37,3 +37,13 @@ module.exports = (client) => {
         },
         saveUninitialized: false
     });
+
+    fastify.addHook('preHandler', (req, res, done) => {
+        req.user = getUser(req.session.get('token_type'), req.session.get('access_token'));
+        req.client = client;
+        req.render = async(file, data = {}, status) => {
+            req.session.set("callback", req.url);
+            const baseData = {
+                client,
+                user: await req.user ? await client.users.fetch((await req.user).id).catch(() => {}) : null,
+            };
