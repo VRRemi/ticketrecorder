@@ -11,3 +11,17 @@ tailwind.config = {
                     600: "#546fb1",
                     700: "#1c283e"
                 },
+                blurple: {
+                    100: "#36393F",
+                    200: "#4E4D73",
+                    300: "#DEE0FC",
+                    700: "#404EED",
+                    900: '#5865F2'
+                },
+            }
+        },
+        fontFamily: {
+            body: ["Nunito"]
+        }
+    }
+}
